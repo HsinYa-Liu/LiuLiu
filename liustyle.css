@@ -78,7 +78,7 @@ h2 {
 }
 
 h3 {
-    border-left: solid 6px #FAF0E6;
+    border-left: solid 6px #FFED97;
     padding-left: 6px;
 }
 
@@ -92,7 +92,7 @@ th,td {
     padding: 16px;
 }
 th {
-    background-color:#FAF0E6;
+    background-color:#FFED97;
 }
 
 /* 作品集 */
