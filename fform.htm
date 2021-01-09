@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tw">
+
+          
+          <title>聯絡我們</title>
+          <meta name="description" content="咖啡">
+          <link rel="stylesheet" href="lliustyle.css">
+<main>
+ 
+
+    <article id="profile">
+    <div class="inner">
+<H2>聯絡我們  </H2>
+<!-- 一開始即執行javascript的 init() function -->
+<body onload="init()">
+</div>
+     </article>
+  <article id="concert">  
+<div class="inner">
+
+ <form   enctype="text/plain" accept-charset="utf-8">
+<section>
+        
+
+
+
+
+
+
+
+ <h3>姓名</h3>
+     <input id="nameText" type="text" name="Name"  value size="30" placeholder="請輸入姓名" required>  <!-- required 必填欄位 ，placeholder 預設內容--> 
+    
+     <H3>連絡電話</H3>
+     <input id="telText"type="tel" name="Phone"  value size="30" aria-invalid="false" placeholder="請輸入連絡電話" required>
+     
+     <H3>訂單編號</H3>
+     <input  id="subText" type="text" name="Subject"  value size="30" aria-invalid="false" placeholder="請輸入訂單編號" required>
+             
+       
+     <H3>信箱</H3>
+     <input id="emailText" type="email" name="Email"  value size="50" placeholder="請輸入電子信箱" required>
+     
+     
+      <H3>詢問內容</H3>
+     <textarea id="bodyText" name="your-message" cols="40" rows="10"  aria-required="true" aria-invalid="false" placeholder="請輸入想對店家說的話" required></textarea>
+     
+     <!-- 傳送按鈕 -->
+     <div>
+         <input type="button" value="送出訊息" onclick="submitHandler();">
+         <a id="mailTo"></a>
+  </div>
+ </form>
+
+  
+<H2>我們的店</H2>
+
+
+
+  
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.8471997669967!2d120.86806701447428!3d24.697778857842014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469b3148d5f2a5d%3A0x60e9ea05110bf9da!2z5qyj5qiC5ZyS5ZKW5ZWh6aSo!5e0!3m2!1szh-TW!2stw!4v1609589289580!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+<script>
+//宣告預設表單內容為空 （你想要的話也可以加東西）
+    var initSubject='',initBody='';
+ 
+    //按下傳送按鈕後執行
+    function submitHandler(){
+        var to = "sunshine1211101@gmail.com";//寫死的傳送對象 就是公司的信箱 不會顯示在網頁上
+        var name = nameText.value;//讀取ID為 nameTextuser 物件中的值
+        var email = emailText.value;
+        var tel = telText.value;
+        var subject = subText.value;
+//把user填的資料都塞到 mail body 中
+        var body = ""+bodyText.value+'%0A%0A%0A';//%0A是換行 換了三行
+            body += "From："+nameText.value+'%0A';
+            body += "Email："+emailText.value+'%0A';
+            body += "Tel："+telText.value;
+//傳送的主要程式碼
+        mailTo.href="mailto:"+to+"?subject="+subject+"&body="+body;
+        mailTo.click();
+    }
+//在body onload
+    function init(){
+        subText.value=initSubject;
+        toText.value=initTo;
+        bodyText.value=initBody;
+    }
+</script>
+
+ </section>
+
+
+<article id="concert">
+<div class="inner">
+
+
+
+</main>
+
+
+</body></html>
+
