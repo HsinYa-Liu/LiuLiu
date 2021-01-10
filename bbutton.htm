@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+ <title>優惠活動</title>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style type="text/css">
+
+		h1{
+
+		color:gray;
+		margin:5px;
+		cursor:pointer;
+		}
+      h1:hover{
+       	background:yellow;
+
+       }
+
+       .sale{
+       	   position: fixed;
+       	   top:0;
+       	   left: 0;
+       	   width: 100%;
+       	   height: 100%;
+       	   z-index: 10;
+       	   background: rgba(0,0,0,0.5);
+       	   display: flex;
+       	   justify-content: center;
+       	   align-items: center;
+       	 }
+    .button{
+             
+    position:absolute;
+    top:20px;
+    right:30px;
+     
+}
+
+
+	</style>
+
+</head>
+<body>
+	<p>欣樂園咖啡館</p>
+	<h1>Sale</h1>
+	<div class="sale">
+		<img src="2.jpg">
+<div class="button">
+
+
+<button>x</button>
+	</div>
+
+	<script type="text/javascript">
+		$('h1').click(function(){
+			$('.sale').slideToggle();
+
+		});
+		$('button').click(function(){
+			$('.sale').slideToggle();
+			
+		});
+	</script>
+
+
+
+</body>
+</html>
